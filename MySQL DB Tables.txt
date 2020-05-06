@@ -1,0 +1,26 @@
+http://localhost:8089/OnlineAuctionWeb/
+
+
+CREATE TABLE `webapp`.`bidder` (
+  `product_name` VARCHAR(40) NOT NULL,
+  `auction_prize` INT NULL,
+  `name` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  `phone` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NULL,
+  PRIMARY KEY (`product_name`));
+
+
+CREATE TABLE `webapp`.`products` (
+  `product_name` VARCHAR(40) NOT NULL,
+  `product_model` VARCHAR(40) NULL,
+  PRIMARY KEY (`product_name`));
+
+--------------------------------------------------------------------------
+Please add few bidders ( using below query ) before running the application so that data base have few bidders to find the winner
+
+INSERT INTO `webapp`.`bidder` (`product_name`, `auction_prize`, `name`, `email`, `phone`, `address`) 
+VALUES ('Apple', '75000', 'Arun', 'arun@gmail.com', '9879879777', 'Bangalore');
+
+INSERT INTO `webapp`.`bidder` (`product_name`, `auction_prize`, `name`, `email`, `phone`, `address`) 
+VALUES ('Microsoft', '50000', 'John', 'John@gmail.com', '9979879777', 'Chennai');
